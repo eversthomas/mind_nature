@@ -1,0 +1,40 @@
+
+// blockquote
+
+blockquote{
+  font-size: 1.4rem;
+  max-width: 80%;
+  padding: 2rem 2rem 2rem 4rem;
+  margin: 1rem 0;
+  color: $primary;
+  border-left: 8px solid $primary ;
+  line-height: 1.6;
+  position: relative;
+  background: $background;
+  -webkit-box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 29px -13px rgba(0,0,0,0.75);
+
+  &::before {
+    content: "\201C";
+    color: $primary;
+    font-size: 4rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  &::after {
+    content: '';
+  }
+
+  span {
+    display: block;
+    color: $primary;
+    font-size: 80%;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+}

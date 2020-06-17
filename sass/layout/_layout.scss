@@ -1,0 +1,32 @@
+
+// layout
+
+.site-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid */
+
+.column {
+  flex-basis: 100%;
+  margin: 0.2rem;
+}
+
+@media screen and (min-width: $bp-medium) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .column {
+    flex: 1;
+  }
+  ._25 {
+    flex: 2.5;
+  }
+  ._5 {
+    flex: 5;
+  }
+}

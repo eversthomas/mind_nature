@@ -1,0 +1,154 @@
+/*start the navigation container scss */
+.navigation-bar {
+	position: sticky;
+	top: 0;
+	z-index: 9;
+
+  /* style the hamburger */
+  label.hamburger {
+    display: block;
+    background: #2980b9;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 16px;
+    border-radius: 4px;
+    transition: border-radius 0.5s;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index:1;
+  }
+
+  input#hamburger {
+    display: none;
+  }
+
+  .line {
+    position: absolute;
+    left: 5px;
+    height: 3px;
+    width: 30px;
+    background: #ffffff;
+    border-radius: 5px;
+    display: block;
+    transition: .5s;
+    transform-origin: center;
+  }
+
+  .line:nth-child(1) {top: 9px;}
+  .line:nth-child(2) {top: 18px;}
+  .line:nth-child(3) {top: 27px;}
+
+  #hamburger:checked + .hamburger .line {
+    background: #ffffff;
+  }
+
+  #hamburger:checked + label.hamburger {
+    background: #2980b9;
+  }
+
+  #hamburger:checked + .hamburger .line:nth-child(1) {
+    transform: translateY(9px) rotate(-45deg);
+  }
+  #hamburger:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger:checked + .hamburger .line:nth-child(3) {
+    transform: translateY(-9px) rotate(45deg);
+  }
+
+  /* menu open and close */
+  nav {
+    position: fixed;
+    top: -100vh;
+    right: -100vw;
+    min-height: 100vh;
+    width: 100vw;
+    background: #2980b9;
+    padding: 2rem;
+    transition: all .6s;
+  }
+
+  #hamburger:checked + .hamburger + nav {
+    right: 0vw;
+    top: 0vh;
+  }
+
+  /* style the mobile menu */
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	padding-top: 3rem;
+	li {
+	  	a {
+			color: #ffffff;
+		}
+		}
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  /* style the menu for desktop */
+  @media screen and (min-width: 600px) {
+    label.hamburger {
+      display: none;
+    }
+    nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      background: white;
+      padding: 5px;
+      transition: all .6s;
+	  border-bottom: 1px solid black;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+
+      ul {
+        margin: 0;padding:0;
+        list-style: none;
+        display: flex;
+
+        li {
+          padding: 10px 15px;
+          position: relative;
+
+		  a {
+		  	color: #2c3e50;
+			font-weight: bold;
+			text-decoration: none;
+			&:hover {
+				border-top: 1px solid black;
+			}
+		  }
+
+          ul {
+            position: absolute;
+            display: block;
+            background: #37474F;
+            width: 100%;
+            top: -9999px;
+            left: -9999px;
+            li {
+              display: block;
+              width: 200%;
+              }
+            }
+          }
+          li:hover > ul {
+            display: block;
+            min-height: 100%;
+            top: 100%;
+            left: 0;
+          }
+      }
+    }
+  }
+}
