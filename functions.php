@@ -139,8 +139,20 @@ function mind_nature_widgets_init() {
 }
 add_action( 'widgets_init', 'mind_nature_widgets_init' );
 
-// enqueue styles and scripts
-include_once( get_template_directory() . '/inc/functions/script_styles.php');
+/**
+ * Enqueue scripts and styles.
+ */
+function mind_nature_scripts() {
+	wp_enqueue_style( 'mind_nature-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'mind_nature-style', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'mind_nature-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'mind_nature_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -185,6 +197,6 @@ include_once( get_template_directory() . '/inc/functions/disable_youtube_cookies
 // disable emojis
 include_once( get_template_directory() . '/inc/functions/disable_emojis.php');
 // put every js to the footer
-include_once( get_template_directory() . '/inc/functions/js2footer.php');
+// include_once( get_template_directory() . '/inc/functions/js2footer.php');
 // minify html
 // include_once( get_template_directory() . '/inc/functions/minify_html.php');
