@@ -2,4 +2,19 @@
 // header
 
 header {
+    background: #373737;
+    
+    .site-branding {
+        
+        h1 {
+            font-size: calc(3rem + 1vw);
+            color: #ffffff;
+        }
+        
+        p {
+            color: #ffffff;
+        }
+        
+    }
+    
 }
