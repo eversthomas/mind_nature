@@ -1,17 +1,19 @@
 
 // header
 
-header {
+#masthead {
+    
     background: #373737;
     
     .site-branding {
         
-        h1 {
-            font-size: calc(3rem + 1vw);
+        h1 a {
+            font-size: calc(3rem + 5vw);
             color: #ffffff;
         }
         
         p {
+            font-size: calc(1rem + 3vw);
             color: #ffffff;
         }
         

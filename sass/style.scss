@@ -33,9 +33,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'components/btn';
 @import 'components/helpers';
 @import 'components/blockquote';
+@import 'components/form';
 // @import 'components/woocommerce';
 
 // layout
+@import 'layout/hamburger';
 @import 'layout/navigation';
 @import 'layout/layout';
 @import 'layout/header';

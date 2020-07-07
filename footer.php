@@ -12,12 +12,12 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="footer-widgets">
-			<?php dynamic_sidebar( 'footer-1' ); ?>
-			<?php dynamic_sidebar( 'footer-2' ); ?>
-			<?php dynamic_sidebar( 'footer-3' ); ?>
-		</div>
-		<div class="site-info">
+	    <div class="footer-widgets wrapper">
+	        <?php dynamic_sidebar( 'footer-1' ); ?>
+	        <?php dynamic_sidebar( 'footer-2' ); ?>
+	        <?php dynamic_sidebar( 'footer-3' ); ?>
+	    </div>
+		<div class="site-info wrapper">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mind_nature' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */

@@ -1,0 +1,7 @@
+06/19/20 4:36:08: style.scss - Undefined variable $color__background-screen: line: 19
+06/19/20 4:36:10: style.scss - Undefined variable $color__background-screen: line: 19
+06/19/20 4:36:17: style.scss - Undefined variable $color__text-screen: line: 24
+06/19/20 4:45:46: style.scss - unclosed block: failed at `` /www/htdocs/w013ef08/development.end-linkage.de/wp-content/themes/mind_nature-master/sass/layout/_header.scss on line 15
+06/22/20 8:40:11: style.scss - Undefined variable $hamburger-padding-y: line: 4
+06/22/20 8:41:11: style.scss - Undefined variable $hamburger-padding-y: line: 4
+06/22/20 8:41:15: style.scss - Undefined variable $hamburger-padding-y: line: 4
